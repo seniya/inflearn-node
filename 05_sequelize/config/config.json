@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "test",
+    "password": 1234,
+    "database": "nodejs",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorAliases": false
+  },
+  "test": {
+    "username": "test",
+    "password": 1234,
+    "database": "nodejs",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorAliases": false
+  },
+  "production": {
+    "username": "test",
+    "password": 1234,
+    "database": "nodejs",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorAliases": false
+  }
+}
