@@ -1,0 +1,29 @@
+const { User } = require("../models");
+
+const LocalStategy = require('passport-local').Strategy;
+const bcrypt = require('bcrypt');
+
+module.exports = (passport) => {
+  passport.use(new LocalStategy({
+    usernameField: 'email', // req.body.email
+    passwordField: 'password',    // req.body.password
+  }, async (email, password, done) => { // done(서버에러), done(null, 사용자정보), done(null, false, 실패정보)
+    try {
+      const exUser = await User.findOne({ where: { email } });
+      if (exUser) {
+        // 비밀번호 검사
+        const result = await bcrypt.compare(password, exUser.password);
+        if (result) {
+          done(null, exUser);
+        } else {
+          done(null, false, { message: '비밀번호가 일치하지 않습니다.' })
+        }
+      } else {
+        done(null, false, { message: '가입되지 않은 회원입니다.' });
+      }
+    } catch (error) {
+      console.error(error);
+      done(error);
+    }
+  }));
+}

@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "test",
+    "password": 1234,
+    "database": "nodebird",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorAliases": false,
+    "logging": false
+  },
+  "test": {
+    "username": "test",
+    "password": 1234,
+    "database": "nodebird",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorAliases": false
+  },
+  "production": {
+    "username": "test",
+    "password": 1234,
+    "database": "nodebird",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorAliases": false
+  }
+}

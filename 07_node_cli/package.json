@@ -1,0 +1,22 @@
+{
+  "name": "07_node_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "cli": "./command.js",
+    "wlt": "./walletCmd.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "inquirer": "^7.2.0",
+    "pg": "^8.2.1",
+    "sequelize": "^6.2.4"
+  }
+}
