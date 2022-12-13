@@ -9,7 +9,7 @@
   "author": "mallang",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "jest": "^26.1.0"
